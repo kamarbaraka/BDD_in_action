@@ -17,13 +17,13 @@ public class ChallengeAttemptServiceImpl implements ChallengeAttemptService {
     public ChallengeAttempt verifyAttempt(ChallengeAttemptDTO attemptDTO) {
 
         /*check if the attempt is correct*/
-        boolean isCorrect = attemptDTO.guess() == attemptDTO.factorA() * attemptDTO.factorB();
+        boolean isCorrect = attemptDTO.getGuess() == attemptDTO.getFactorA() * attemptDTO.getFactorB();
 
         /*construct the challenge attempt*/
         ChallengeAttempt challengeAttempt = new ChallengeAttempt();
-        challengeAttempt.setFactorA(attemptDTO.factorA());
-        challengeAttempt.setGetFactorB(attemptDTO.factorB());
-        challengeAttempt.setResultAttempt(attemptDTO.guess());
+        challengeAttempt.setFactorA(attemptDTO.getFactorA());
+        challengeAttempt.setGetFactorB(attemptDTO.getFactorB());
+        challengeAttempt.setResultAttempt(attemptDTO.getGuess());
         challengeAttempt.setCorrect(isCorrect);
 
         return challengeAttempt;
