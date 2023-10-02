@@ -21,12 +21,18 @@ configurations {
 repositories {
     mavenCentral()
 }
-
-extra["snippetsDir"] = file("build/generated-snippets")
+//val snippetsDir = file("build/generated-snippets")
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-starter-webmvc-ui
+    implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0")
+    // https://mvnrepository.com/artifact/org.jetbrains/annotations
+    implementation("org.jetbrains:annotations:24.0.1")
+    // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    implementation("org.modelmapper:modelmapper:3.1.1")
+
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
@@ -40,11 +46,11 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-tasks.test {
+/*tasks.test {
     outputs.dir(snippetsDir)
 }
 
 tasks.asciidoctor {
     inputs.dir(snippetsDir)
-    dependsOn(test)
-}
+    dependsOn()
+}*/
