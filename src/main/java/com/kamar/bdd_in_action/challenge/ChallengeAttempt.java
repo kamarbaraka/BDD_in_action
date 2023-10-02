@@ -1,5 +1,6 @@
 package com.kamar.bdd_in_action.challenge;
 
+import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -8,9 +9,7 @@ import lombok.Setter;
  * a class to hold {@link com.kamar.bdd_in_action.user.User} challenge attempt data.
  * @author kamar baraka.*/
 
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
 public class ChallengeAttempt {
 
     private long challengeId;
