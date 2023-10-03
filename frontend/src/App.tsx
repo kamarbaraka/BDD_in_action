@@ -1,10 +1,11 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '/vite.svg'*/
 import './App.css'
+import ChallengeComponent from "./components/ChallengeComponent.tsx";
 
 function App() {
-  const [count, setCount] = useState(0)
+  /*const [count, setCount] = useState(0)
 
   return (
     <>
@@ -29,7 +30,17 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  )*/
+
+    return (
+
+        <div className={"App"}>
+            <header className={"App-header"}>
+                <ChallengeComponent/>
+            </header>
+        </div>
+
+    );
 }
 
 export default App
